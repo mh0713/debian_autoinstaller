@@ -5,7 +5,7 @@ set -o errexit
 # 変数定義
 CUR_DIR=$(cd $(dirname $0); pwd)
 SRC_DIR="${CUR_DIR}"/src
-ORIG_ISO="${CUR_DIR}"/base_iso/debian-12.1.0-amd64-netinst.iso
+ORIG_ISO="${CUR_DIR}"/base_iso/debian-12.2.0-amd64-netinst.iso
 NEW_FILES="${CUR_DIR}"/tmp/
 VER=$(git tag | sort | tail -n 1)
 
@@ -16,7 +16,7 @@ do
   esac
 done
 
-NEW_ISO="${NEW_FILES}"/installer-bookworm-${VER}.iso
+NEW_ISO="${NEW_FILES}"/installer-12.2-${VER}.iso
 MBR_TEMPLATE=isohdpfx.bin
 
 
