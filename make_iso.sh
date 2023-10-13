@@ -52,7 +52,7 @@ dd if="${ORIG_ISO}" bs=1 count=432 of="${MBR_TEMPLATE}"
 
 #ブータブルISOの作成
 sudo xorriso -as mkisofs \
-   -r -V 'TS6000 bookworm installer n' \
+   -r -V 'debian 12.2 installer n' \
    -o "${NEW_ISO}" \
    -J -J -joliet-long -cache-inodes \
    -isohybrid-mbr "${MBR_TEMPLATE}" \
